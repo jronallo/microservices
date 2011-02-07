@@ -18,7 +18,7 @@ class Package < ActiveRecord::Base
   end
 
   def object_path
-    File.join RAILS_ROOT, 'data', Pairtree::Path.id_to_path(self.identifier)
+    File.join RAILS_ROOT, 'data', Pairtree::Path.id_to_path(self.identifier), self.identifier
   end
 
   private
